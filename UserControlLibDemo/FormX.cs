@@ -34,5 +34,16 @@ namespace UserControlLibDemo
             spBlockDiagram1.SetAnalyzeData(_data);
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            byte[] _data = new byte[1000];
+            for (int i = 0; i < 1000; i++)
+            {
+                _data[i] = (byte)rnd.Next(0, 2); //use indexes of preselected colors (see BlockColors Property)
+            }
+            spBlockDiagram1.SetAnalyzeData(_data);
+        }
+
     }
 }
