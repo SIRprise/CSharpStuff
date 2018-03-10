@@ -1,0 +1,1 @@
+C:\Users\Patrick\Documents\GitHub\CSharpStuff\GUISynchronisationSingleton\bin\Debug\GUISynchronisationSingleton.exe.config
