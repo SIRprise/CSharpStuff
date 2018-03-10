@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{06FADCA4-8753-4531-ABB8-CF8691ED2099}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{BA180BC2-939F-4A19-A70F-0A52E7009301}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UserControlLib</RootNamespace>
-    <AssemblyName>UserControlLib</AssemblyName>
+    <RootNamespace>UserControlLibDemo</RootNamespace>
+    <AssemblyName>UserControlLibDemo</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -36,32 +38,33 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SpBlockDiagram.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="SpBlockDiagram.Designer.cs">
-      <DependentUpon>SpBlockDiagram.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SpForm.cs">
+    <Compile Include="FormX.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SpForm.Designer.cs">
-      <DependentUpon>SpForm.cs</DependentUpon>
+    <Compile Include="FormX.Designer.cs">
+      <DependentUpon>FormX.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="SpBlockDiagram.resx">
-      <DependentUpon>SpBlockDiagram.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SpForm.resx">
-      <DependentUpon>SpForm.cs</DependentUpon>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UserControlLib\UserControlLib.csproj">
+      <Project>{06fadca4-8753-4531-abb8-cf8691ed2099}</Project>
+      <Name>UserControlLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormX.resx">
+      <DependentUpon>FormX.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

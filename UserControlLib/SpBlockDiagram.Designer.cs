@@ -1,13 +1,13 @@
-﻿namespace UserControlLib
+﻿namespace SIRpriseUserControls
 {
-    partial class UserControl1
+    partial class SpBlockDiagram
     {
-        /// <summary>
+        /// <summary> 
         /// Erforderliche Designervariable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Verwendete Ressourcen bereinigen.
         /// </summary>
         /// <param name="disposing">True, wenn verwaltete Ressourcen gelöscht werden sollen; andernfalls False.</param>
@@ -22,14 +22,19 @@
 
         #region Vom Komponenten-Designer generierter Code
 
-        /// <summary>
+        /// <summary> 
         /// Erforderliche Methode für die Designerunterstützung. 
         /// Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.SuspendLayout();
+            // 
+            // SpBlockDiagram
+            // 
+            this.Name = "SpBlockDiagram";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
