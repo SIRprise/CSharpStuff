@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUISynchronisationSingleton", "GUISynchronisationSingleton\GUISynchronisationSingleton.csproj", "{1EBDD22E-13A5-4B70-8C3F-3A4B49428FA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserControlLib", "UserControlLib\UserControlLib.csproj", "{06FADCA4-8753-4531-ABB8-CF8691ED2099}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{1EBDD22E-13A5-4B70-8C3F-3A4B49428FA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EBDD22E-13A5-4B70-8C3F-3A4B49428FA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EBDD22E-13A5-4B70-8C3F-3A4B49428FA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06FADCA4-8753-4531-ABB8-CF8691ED2099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06FADCA4-8753-4531-ABB8-CF8691ED2099}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06FADCA4-8753-4531-ABB8-CF8691ED2099}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06FADCA4-8753-4531-ABB8-CF8691ED2099}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
