@@ -83,10 +83,10 @@ namespace SIRpriseUserControls
             int numberOfLines = numberOfBlocks / _blocksPerLine;
             if ((numberOfBlocks / _blocksPerLine) > numberOfLines)
                 numberOfLines++;
-            _allBlocksDisplayed = ((ClientRectangle.Height / (numberOfLines * (_blockSize + _borderSize))) < 1);
+            _allBlocksDisplayed = !((ClientRectangle.Height / (numberOfLines * (_blockSize + _borderSize))) < 1);
             if (this.AutoScroll)
             {
-                this.VScroll = _allBlocksDisplayed;
+                this.VScroll = !_allBlocksDisplayed;
             }
 
             //paint blocks dependend on decide-function (length) to decide color

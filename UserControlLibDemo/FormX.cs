@@ -32,6 +32,10 @@ namespace UserControlLibDemo
                 _data[i] = Color.FromArgb(255, rnd.Next(50, 255), rnd.Next(50, 255), rnd.Next(50, 255));
             }
             spBlockDiagram1.SetAnalyzeData(_data);
+            if (spBlockDiagram1.AllBlocksDisplayed)
+                textBox1.Text = "All Blocks are displayed";
+            else
+                textBox1.Text = "BlockDiagramControl size too small to display all Blocks";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -43,6 +47,10 @@ namespace UserControlLibDemo
                 _data[i] = (byte)rnd.Next(0, 2); //use indexes of preselected colors (see BlockColors Property)
             }
             spBlockDiagram1.SetAnalyzeData(_data);
+            if (spBlockDiagram1.AllBlocksDisplayed)
+                textBox1.Text = "All Blocks are displayed";
+            else
+                textBox1.Text = "BlockDiagramControl size too small to display all Blocks";
         }
 
     }

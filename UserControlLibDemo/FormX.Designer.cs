@@ -32,6 +32,7 @@
             this.spBlockDiagram1 = new SIRpriseUserControls.SpBlockDiagram();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // spBlockDiagram1
@@ -41,7 +42,7 @@
             this.spBlockDiagram1.BlockSize = 4;
             this.spBlockDiagram1.Location = new System.Drawing.Point(95, 76);
             this.spBlockDiagram1.Name = "spBlockDiagram1";
-            this.spBlockDiagram1.Size = new System.Drawing.Size(299, 157);
+            this.spBlockDiagram1.Size = new System.Drawing.Size(129, 108);
             this.spBlockDiagram1.TabIndex = 0;
             this.spBlockDiagram1.BlockClick += new System.EventHandler(this.spBlockDiagram1_BlockClick);
             // 
@@ -65,12 +66,21 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(41, 239);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(353, 20);
+            this.textBox1.TabIndex = 3;
+            // 
             // FormX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(572, 333);
             this.ControlBox = true;
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.spBlockDiagram1);
@@ -78,6 +88,7 @@
             this.Name = "FormX";
             this.Text = "SpForm(modified)";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -86,5 +97,6 @@
         private SIRpriseUserControls.SpBlockDiagram spBlockDiagram1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
