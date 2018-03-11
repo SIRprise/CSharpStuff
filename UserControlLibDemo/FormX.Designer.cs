@@ -39,10 +39,10 @@
             // 
             this.spBlockDiagram1.AutoScroll = true;
             this.spBlockDiagram1.BlockColors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("spBlockDiagram1.BlockColors")));
-            this.spBlockDiagram1.BlockSize = 4;
-            this.spBlockDiagram1.Location = new System.Drawing.Point(95, 76);
+            this.spBlockDiagram1.BlockSize = 15;
+            this.spBlockDiagram1.Location = new System.Drawing.Point(68, 75);
             this.spBlockDiagram1.Name = "spBlockDiagram1";
-            this.spBlockDiagram1.Size = new System.Drawing.Size(129, 108);
+            this.spBlockDiagram1.Size = new System.Drawing.Size(247, 158);
             this.spBlockDiagram1.TabIndex = 0;
             this.spBlockDiagram1.BlockClick += new System.EventHandler(this.spBlockDiagram1_BlockClick);
             // 
