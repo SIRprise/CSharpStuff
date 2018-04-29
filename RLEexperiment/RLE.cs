@@ -52,7 +52,7 @@ namespace RLEexperiment
                 {
                     //escape symbol cannot be compressed
                     encList.Add(escape);
-                    encList.Add(source[i]);
+                    encList.Add(source[i]); // = escape
                 }
             }
 
