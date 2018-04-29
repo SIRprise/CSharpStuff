@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserControlLibDemo", "UserC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RLEexperiment", "RLEexperiment\RLEexperiment.csproj", "{D886712C-560D-412E-9966-330545FEB077}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helpers\Helpers.csproj", "{4FB1BD66-A5E1-499E-83B3-E9B9EFA740F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperUnitTest", "HelperUnitTest\HelperUnitTest.csproj", "{C045C611-097D-4C1E-BD5B-F42ADA02976F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{D886712C-560D-412E-9966-330545FEB077}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D886712C-560D-412E-9966-330545FEB077}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D886712C-560D-412E-9966-330545FEB077}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FB1BD66-A5E1-499E-83B3-E9B9EFA740F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FB1BD66-A5E1-499E-83B3-E9B9EFA740F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FB1BD66-A5E1-499E-83B3-E9B9EFA740F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FB1BD66-A5E1-499E-83B3-E9B9EFA740F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C045C611-097D-4C1E-BD5B-F42ADA02976F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C045C611-097D-4C1E-BD5B-F42ADA02976F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C045C611-097D-4C1E-BD5B-F42ADA02976F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C045C611-097D-4C1E-BD5B-F42ADA02976F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

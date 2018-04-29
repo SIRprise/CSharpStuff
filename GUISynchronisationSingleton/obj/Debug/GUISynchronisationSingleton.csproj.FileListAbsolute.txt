@@ -7,5 +7,3 @@ C:\Users\Patrick\Documents\GitHub\CSharpStuff\GUISynchronisationSingleton\obj\De
 C:\Users\Patrick\Documents\GitHub\CSharpStuff\GUISynchronisationSingleton\obj\Debug\GUISynchronisationSingleton.csproj.GenerateResource.Cache
 C:\Users\Patrick\Documents\GitHub\CSharpStuff\GUISynchronisationSingleton\obj\Debug\GUISynchronisationSingleton.exe
 C:\Users\Patrick\Documents\GitHub\CSharpStuff\GUISynchronisationSingleton\obj\Debug\GUISynchronisationSingleton.pdb
-C:\Users\Patrick\Documents\GitHub\CSharpStuff\GUISynchronisationSingleton\bin\Debug\GUISynchronisationSingleton.exe.CodeAnalysisLog.xml
-C:\Users\Patrick\Documents\GitHub\CSharpStuff\GUISynchronisationSingleton\bin\Debug\GUISynchronisationSingleton.exe.lastcodeanalysissucceeded

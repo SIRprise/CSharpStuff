@@ -67,6 +67,7 @@ namespace SIRpriseUserControls
 
         public void SetAnalyzeData(Color[] data)
         {
+            _data = new Color[data.Length];
             data.CopyTo(_data, 0);
 
             this.Refresh();
@@ -80,7 +81,7 @@ namespace SIRpriseUserControls
             int numberOfBlocks = _data.Length;
             int _borderSize = 2;
             _blocksPerLine = ClientRectangle.Width / (_blockSize + _borderSize);
-            int numberOfLines = numberOfBlocks / _blocksPerLine;
+            int numberOfLines = (int)Math.Ceiling((double)numberOfBlocks / _blocksPerLine);
             if ((numberOfBlocks / _blocksPerLine) > numberOfLines)
                 numberOfLines++;
             _allBlocksDisplayed = !((ClientRectangle.Height / (numberOfLines * (_blockSize + _borderSize))) < 1);
@@ -95,9 +96,9 @@ namespace SIRpriseUserControls
             for(int y=0; y<numberOfLines; y++)
                 for(int x=0; x<_blocksPerLine; x++)
                 {
-                    if (numberOfBlocks > (y * numberOfLines + x))
+                    if ((y * _blocksPerLine + x) < numberOfBlocks)
                     {
-                        b.Color = _data[y * numberOfLines + x];
+                        b.Color = _data[y * _blocksPerLine + x];
                         g.FillRectangle(b, x * (_blockSize + _borderSize), y * (_blockSize + _borderSize), _blockSize, _blockSize);
                     }
                 }
@@ -111,19 +112,25 @@ namespace SIRpriseUserControls
             int numberOfBlocks = _data.Length;
             int _borderSize = 2;
             _blocksPerLine = ClientRectangle.Width / (_blockSize + _borderSize);
-            int numberOfLines = numberOfBlocks / _blocksPerLine;
+            int numberOfLines = (int)Math.Ceiling((double)numberOfBlocks / _blocksPerLine);
             if ((numberOfBlocks / _blocksPerLine) > numberOfLines)
                 numberOfLines++;
 
             int linenumber = y / (_blockSize + _borderSize);
             int elementnumber = x / (_blockSize + _borderSize);
+
+            int result = linenumber * _blocksPerLine + elementnumber;
+            if (result >= _data.Length)
+                return -1;
             return linenumber*_blocksPerLine+elementnumber;
         }
 
         protected override void OnMouseDown(MouseEventArgs e)
         {
             base.OnMouseDown(e);
-            BlockClick(this, new BlockClickEventArgs(getIndexOfPosition(e.X, e.Y)));
+            
+            if(getIndexOfPosition(e.X,e.Y) != -1)
+                BlockClick(this, new BlockClickEventArgs(getIndexOfPosition(e.X, e.Y)));
         }
 
         [Category("Action")]

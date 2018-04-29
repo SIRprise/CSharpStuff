@@ -31,11 +31,11 @@ namespace RLEexperiment
                     }
                     else
                     {
-                        if ((i == source.Length-1) || (source[i] != source[i + 1]))
+                        if ((i == source.Length - 1) || (source[i] != source[i + 1]))
                         {
                             if (runLength < threshhold)
                             {
-                                for(int j=0;j<runLength;j++)
+                                for (int j = 0; j < runLength; j++)
                                     encList.Add(source[i]);
                             }
                             else
@@ -67,7 +67,7 @@ namespace RLEexperiment
             for (int i = 0; i < source.Length; i++)
             {
                 //case of last char == ctrl char and no byte is following (illegal encoding) is not covered -> exception
-                if(source[i]==escape)
+                if (source[i] == escape)
                 {
                     if (source[i + 1] == escape)
                     {
@@ -77,7 +77,7 @@ namespace RLEexperiment
                     else
                     {
                         for (int j = 0; j < source[i + 2]; j++)
-                            dec.Add(source[i+1]);
+                            dec.Add(source[i + 1]);
                         i += 2;
                     }
                 }

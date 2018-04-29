@@ -4,6 +4,9 @@ Learn Stuff, Tests and Libs (Created with Visual Studio)
 ## GUISynchronisationSingleton
 Shows a Progressbar, which is filled by a non-GUI Timer (asynchronous event). 3 slightly different ways are used (can be uncommented at end of CHelper.cs). Singleton-Pattern is implemented there, too.
 
+## Helpers \& HelperUnitTest
+Helper class with a lot of small functions, code snippets and algorithms often needed.
+
 ## RLEexperiment
 Simple Run-Length-Encoding implementation for byte-arrays, with configurable escape-character and threshold (minimum number of same byte before encoding).
 Default: 0x254 -> 0x254 0x254; 8x 0xff -> 0x254 0xff 0x08

@@ -17,14 +17,14 @@ namespace RLEexperiment
             //create some random data + fill some parts with same value
             Random rnd = new Random();
             rnd.NextBytes(data);
-            for(int i=0; i<5; i++)
+            for (int i = 0; i < 5; i++)
             {
-                int idx = rnd.Next(0,arraysize);
+                int idx = rnd.Next(0, arraysize);
                 int fillsize = rnd.Next(1, data.Length);
                 fillsize = ((fillsize + idx) > arraysize) ? (arraysize - idx) : fillsize; //check upper boarder while filling
                 Enumerable.Repeat(data[idx], fillsize).ToArray().CopyTo(data, idx);
             }
-             
+
             //Enumerable.Repeat((byte)0xAA, arraysize).ToArray().CopyTo(data, 0);
 
             //encode
