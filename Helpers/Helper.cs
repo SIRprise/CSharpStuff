@@ -21,6 +21,7 @@ namespace Helpers
             return result;
         }
 
+        //TBD: make following in fn before as option
         public static T[] arrSubArrayDeepClone<T>(this T[] data, int index, int length)
         {
             T[] arrCopy = new T[length];
@@ -99,7 +100,7 @@ namespace Helpers
             {
                 throw new ArgumentException("T must be an enumerated type");
             }
-            return enumtype.ToString();
+            return enumtype.ToString(); //or try ToString("G") for string or "D" for number
         }
 
         public static byte[] arrGetRandomBytes(int count)
@@ -119,8 +120,23 @@ namespace Helpers
             box.SelectionColor = box.ForeColor;
         }
 
+        public static string GetRightAlignedString(List<string> sl)
+        {
+            int maxlen=0;
+            string result="";
+
+            foreach (string str in sl)
+                if (str.Length > maxlen)
+                    maxlen = str.Length;
+
+            foreach (string str in sl)
+                result += str.PadLeft(maxlen) + "\r\n";
+
+            return result;
+        }
+
         //Histogram
-        public static List<T> getListSortedByOccurence<T>(List<T> l)
+        public static List<T> GetListSortedByOccurence<T>(List<T> l)
         {
             List<T> tempList = new List<T>();
 
@@ -143,9 +159,45 @@ namespace Helpers
         public Color color;
     }
 
-    //delegates... TBD
-
-
     #endregion
 
 }
+
+/*
+     * possible topics for future:
+     * 
+     * delegates and simplifiers (+ function pointer, unmanaged-code-wrapper)
+     * simplified execute methode in new thread->return result synchronized with new waiting thread (with timeout) per result->end finished threads
+     *  +exit feature for termination of program
+     * dynamical wrapper class to analyze and load native librarys (windows first -> DLL) via P/Invoke + GC handling (pinning)
+     * thread-pool class (scheduler? - see github), and threadsafe data containers (with data-copy-output instead of reference?)
+     * calendar and time-calculation-tools
+     * tutorial .net-dll binding with ILmerge
+     * tutorial for installer and special paths (temp, appdata, program files, registry)
+     * regex tutorial and simplifier class
+     * packing / crypting embedded stuff
+     * winforms container + more controlls (hex-editor? color text textbox?)
+     * rtf-class
+     * excel-output
+     * filesystem traveller + buildtree + indexer
+     * sqlite connection
+     * special graphic algorithms: fast scaling, fast object matching/find with tolerance, histogram, seam-carving
+     * wrapper/simplifier for directX and/or openGL
+     * configurable, fast plotter (as a control?)
+     * sound generation class
+     * game specific stuff: geometry, distance, collision detection, prediction of movement
+     * printing class (make it simple to print what is displayed)
+     * special serialport class
+     * special tcp socket handling class
+     * special container class to interconnect parsing keywords and parameters with function calls
+     * special class to switch user context dynamically / ask for admin rights
+     * low level stuff: drivers, ata secure erase? parsing filesystems?
+     * algorithms: fft, pid, ekf
+     * CLI stuff: command-parser, output in big letters
+     * reflection avoidance, code injection
+     * benchmarking
+     * compact framework special topics: readallbytes-wrapper, delayed starter of methods (cause of lacking onLoad), get cpu-load and split into threads
+     * mono
+     * arduino wrapper? (see github) for firmata? or do universal µC interface with pinmap/peripherals for C# + HAL for µC
+     * design pattern examples
+*/
