@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Helpers
 {
-    public static class Helper
+    public static class Arr
     {
 
 
@@ -51,7 +51,10 @@ namespace Helpers
             return ma.SequenceEqual(mb);
         }
         #endregion
+    }
 
+    public static class Misc
+    {
         #region hex
         public static byte[] String2Hex(string hex)
         {
